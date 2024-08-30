@@ -45,8 +45,7 @@ class UserHandler:
         if user.get_email() is None or len(user.get_email().strip()) == 0:
             return False
         user.set_email(user.get_email().strip())
-        print(user.get_email())
         if not self.isValidEmail(user.get_email()):
             return False
-    
+        return True
     
